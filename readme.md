@@ -14,16 +14,17 @@ I've been pointing people here for a while now, and noticed that my instructions
 
 Now, simply launch OneClickDSC.ps1 in PowerShell, and click the Play button (or hit F5), to launch the GUI
 
-<img class="alignnone wp-image-2172 size-large" src="https://foxdeploy.files.wordpress.com/2015/03/introtodsc.jpg?w=705" alt="IntroToDsc" width="705" height="154" />
+<img class="alignnone wp-image-2172 size-large" src="https://raw.githubusercontent.com/1RedOne/DSC_OneClick-DomainController/master/postImg/DSCPrompt.png" alt="IntroToDsc"/>
 
 
 Now, type in the password of the first domain admin to be created.
 
 
-<img class="alignnone wp-image-2172 size-large" src="https://foxdeploy.files.wordpress.com/2015/03/introtodsc.jpg?w=705" alt="IntroToDsc" width="705" height="154" />
+<img class="alignnone wp-image-2172 size-large" src="https://raw.githubusercontent.com/1RedOne/DSC_OneClick-DomainController/master/postImg/DomainAdminCreds.png" alt="IntroToDsc"/>
 
 First step for application, is to change the computer's name.  This requires a reboot.  So...reboot.
 
+<img class="alignnone wp-image-2172 size-large" src="https://raw.githubusercontent.com/1RedOne/DSC_OneClick-DomainController/master/postImg/RebootToChangeTheName.png" alt="IntroToDsc"/>
 
 
 On restart, we can run the following commands to watch the rest of the DSC Application
