@@ -33,8 +33,13 @@ Stop-DSCConfiguration -Force
 #Resume so we can watch it
 Start-DscConfiguration -ComputerName localhost -Wait -Force -Verbose -UseExisting
 
-You may run into an error, specifically w/ the computername module.  I'm not sure what the issue here, as the system seems to be renamed, but you can safely ignore it. 
+Now, if you diverged from using my copy of the DSC resources, you may run into an error, specifically w/ the computername module, around specifying a name for a Computer, without specifying a domain name.  This is an open issue in GitHub right now, so hopefully the problem will be resolved soon, but for now, the copy you'll get w/ this blog post has the proposed fix to the issue.
 
 And...we're done when we see this screen!
 
-So, not a lot of meat to this one, but I hope this clears up the questions people were asking about how to use this 'OneClick Domain Controller'
+<img class="alignnone wp-image-2172 size-large" src="https://raw.githubusercontent.com/1RedOne/DSC_OneClick-DomainController/master/postImg/NewDomain.png" alt="IntroToDsc"/>
+
+
+So, I hope this clears up the questions people were asking about how to use this 'OneClick Domain Controller'.
+
+My next plan is to add SQL support and the prerequisites for SCCM.  And then we'll work up to a one-click ConfigMgr install!
