@@ -202,9 +202,9 @@ Write-host "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 $machinename = $WPFComputerName.Text
 $domainName = $WPFDomainName.Text
 
-write-host "user specified new domain name of $userDomain" | tee -Append c:\powershell\DSCBuild.log
+write-host "user specified new domain name of $domainName" | tee -Append c:\powershell\DSCBuild.log
 "Your account $($env:USERNAME) will be promoted to a domain admin. `nYou should log on to the machine with your credentials of $domainName\$env:USERNAME"  | tee -Append c:\powershell\DSCBuild.log
-TestLab -DomainName $userDomain -Password $localuser -machineName $machinename `
+TestLab -DomainName $domainName -Password $localuser -machineName $machinename `
     -SafeModePW $SafeModePW -firstDomainAdmin (Get-Credential -UserName "$domainName\$env:USERNAME" -Message 'Store your credentials' | tee -filePath  c:\powershell\DSCBuild.log -append) `
     -ConfigurationData $configData
  
